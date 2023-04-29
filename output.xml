@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230429 13:48:23.113" rpa="false" schemaversion="3">
+<suite id="s1" name="Teststories2 &amp; Teststories3 &amp; Teststories1">
+<suite id="s1-s1" name="Teststories2" source="c:\Users\Rivi\Downloads\Compressed\AutomationTestCineplex\teststories2.robot">
+<test id="s1-s1-t1" name="2. User can see movie now playing theater in the other city example Yogyakarta." line="39">
+<kw name="Go to Cineplex website">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230429 13:48:23.642" level="INFO">Opening browser 'Chrome' to base url 'https://m.21cineplex.com/'.</msg>
+<msg timestamp="20230429 13:48:23.670" level="INFO">Executing: c:\Users\Rivi\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230429 13:48:23.641" endtime="20230429 13:48:31.727"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230429 13:48:31.728" endtime="20230429 13:48:31.843"/>
+</kw>
+<status status="PASS" starttime="20230429 13:48:23.640" endtime="20230429 13:48:31.844"/>
+</kw>
+<kw name="Find Playing In Yogyakarta">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PlayingInButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230429 13:48:31.845" endtime="20230429 13:48:31.877"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PlayingInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 13:48:31.878" level="INFO">Clicking element 'xpath=//a[@href='gui.list_city.php?sid=']'.</msg>
+<status status="PASS" starttime="20230429 13:48:31.877" endtime="20230429 13:48:32.335"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${YogyakartaOption}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 13:48:32.337" level="INFO">Clicking element 'xpath=//div[contains(text(),'YOGYAKARTA')]'.</msg>
+<status status="PASS" starttime="20230429 13:48:32.336" endtime="20230429 13:48:33.322"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NowPlayingButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 13:48:33.323" level="INFO">Clicking element 'xpath=//a[@href='index.php?sid=']'.</msg>
+<status status="PASS" starttime="20230429 13:48:33.323" endtime="20230429 13:48:35.459"/>
+</kw>
+<status status="PASS" starttime="20230429 13:48:31.845" endtime="20230429 13:48:35.459"/>
+</kw>
+<kw name="Assertion for Playing Theater in Yogyakarta">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${error}</var>
+<arg>${MaafText}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230429 13:48:35.482" level="INFO">${error} = 1</msg>
+<status status="PASS" starttime="20230429 13:48:35.464" endtime="20230429 13:48:35.483"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230429 13:48:39.484" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230429 13:48:35.483" endtime="20230429 13:48:39.484"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${error}&gt;0</arg>
+<arg>Reload Page</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230429 13:48:39.486" endtime="20230429 13:48:39.712"/>
+</kw>
+<status status="PASS" starttime="20230429 13:48:39.485" endtime="20230429 13:48:39.712"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PlayingInYogyakartaText}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230429 13:48:39.713" endtime="20230429 13:48:39.751"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PlayingInYogyakartaText}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230429 13:48:39.771" level="INFO">Element 'xpath=//a[contains(text(),'Playing in - YOGYAKARTA')]' is displayed.</msg>
+<status status="PASS" starttime="20230429 13:48:39.751" endtime="20230429 13:48:39.772"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20230429 13:48:39.927" level="INFO" html="true">&lt;a href="screenshot_1.jpg"&gt;&lt;img src="screenshot_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230429 13:48:39.772" endtime="20230429 13:48:39.927"/>
+</kw>
+<status status="PASS" starttime="20230429 13:48:35.462" endtime="20230429 13:48:39.928"/>
+</kw>
+<status status="PASS" starttime="20230429 13:48:23.638" endtime="20230429 13:48:39.929"/>
+</test>
+<status status="PASS" starttime="20230429 13:48:23.157" endtime="20230429 13:48:39.932"/>
+</suite>
+<suite id="s1-s2" name="Teststories3" source="c:\Users\Rivi\Downloads\Compressed\AutomationTestCineplex\teststories3.robot">
+<test id="s1-s2-t1" name="3. User can watch trailer upcoming movie." line="40">
+<kw name="Go to Cineplex website">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230429 13:48:39.950" level="INFO">Opening browser 'Chrome' to base url 'https://m.21cineplex.com/'.</msg>
+<msg timestamp="20230429 13:48:39.975" level="INFO">Executing: c:\Users\Rivi\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230429 13:48:39.948" endtime="20230429 13:49:04.398"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230429 13:49:04.399" endtime="20230429 13:49:04.525"/>
+</kw>
+<status status="PASS" starttime="20230429 13:48:39.947" endtime="20230429 13:49:04.526"/>
+</kw>
+<kw name="Go to coming soon movie">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ComingSoonButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230429 13:49:04.528" endtime="20230429 13:49:04.561"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ComingSoonButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 13:49:04.563" level="INFO">Clicking element 'xpath=//a[@href='gui.coming_soon.php?sid=']'.</msg>
+<status status="PASS" starttime="20230429 13:49:04.562" endtime="20230429 13:49:09.049"/>
+</kw>
+<status status="PASS" starttime="20230429 13:49:04.527" endtime="20230429 13:49:09.049"/>
+</kw>
+<kw name="Choose Random Movie">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${MovieCount}</var>
+<arg>${MovieGrid}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230429 13:49:09.065" level="INFO">${MovieCount} = 17</msg>
+<status status="PASS" starttime="20230429 13:49:09.051" endtime="20230429 13:49:09.065"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${RandomNumbers}</var>
+<arg>random.sample(range(1, ${MovieCount}), 1)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230429 13:49:09.067" level="INFO">${RandomNumbers} = [15]</msg>
+<status status="PASS" starttime="20230429 13:49:09.066" endtime="20230429 13:49:09.067"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/section/div[3]/div[2]/div${RandomNumbers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 13:49:09.068" level="INFO">Clicking element 'xpath=/html/body/section/div[3]/div[2]/div[15]'.</msg>
+<status status="PASS" starttime="20230429 13:49:09.067" endtime="20230429 13:49:09.273"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TrailerButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230429 13:49:09.274" endtime="20230429 13:49:09.305"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TrailerButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 13:49:09.306" level="INFO">Clicking element 'xpath=//*[contains(text(),'TRAILER')]'.</msg>
+<status status="PASS" starttime="20230429 13:49:09.305" endtime="20230429 13:49:09.415"/>
+</kw>
+<status status="PASS" starttime="20230429 13:49:09.050" endtime="20230429 13:49:09.416"/>
+</kw>
+<kw name="Assertion for the Trailer exist">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TrailerMedia}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230429 13:49:09.418" endtime="20230429 13:49:09.465"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TrailerMedia}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230429 13:49:09.526" level="INFO">Element 'xpath=//video[@name='media']' is displayed.</msg>
+<status status="PASS" starttime="20230429 13:49:09.465" endtime="20230429 13:49:09.527"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20230429 13:49:09.684" level="INFO" html="true">&lt;a href="screenshot_2.jpg"&gt;&lt;img src="screenshot_2.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230429 13:49:09.528" endtime="20230429 13:49:09.684"/>
+</kw>
+<status status="PASS" starttime="20230429 13:49:09.417" endtime="20230429 13:49:09.685"/>
+</kw>
+<status status="PASS" starttime="20230429 13:48:39.946" endtime="20230429 13:49:09.685"/>
+</test>
+<status status="PASS" starttime="20230429 13:48:39.937" endtime="20230429 13:49:09.687"/>
+</suite>
+<suite id="s1-s3" name="Teststories1" source="c:\Users\Rivi\Downloads\Compressed\AutomationTestCineplex\teststories1.robot">
+<test id="s1-s3-t1" name="1. User can play trailer random movie" line="36">
+<kw name="Go to Cineplex website">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230429 13:49:09.811" level="INFO">Opening browser 'Chrome' to base url 'https://m.21cineplex.com/'.</msg>
+<msg timestamp="20230429 13:49:09.844" level="INFO">Executing: c:\Users\Rivi\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230429 13:49:09.810" endtime="20230429 13:49:54.144"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230429 13:49:54.145" endtime="20230429 13:49:54.273"/>
+</kw>
+<status status="PASS" starttime="20230429 13:49:09.809" endtime="20230429 13:49:54.274"/>
+</kw>
+<kw name="Choose Random Movie">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${MovieCount}</var>
+<arg>${MovieGrid}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230429 13:49:54.302" level="INFO">${MovieCount} = 18</msg>
+<status status="PASS" starttime="20230429 13:49:54.278" endtime="20230429 13:49:54.302"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${RandomNumbers}</var>
+<arg>random.sample(range(1, ${MovieCount}), 1)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230429 13:49:54.303" level="INFO">${RandomNumbers} = [12]</msg>
+<status status="PASS" starttime="20230429 13:49:54.302" endtime="20230429 13:49:54.304"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/section/div[3]/div[2]/div${RandomNumbers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 13:49:54.305" level="INFO">Clicking element 'xpath=/html/body/section/div[3]/div[2]/div[12]'.</msg>
+<status status="PASS" starttime="20230429 13:49:54.304" endtime="20230429 13:50:01.032"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TrailerButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230429 13:50:01.033" endtime="20230429 13:50:01.084"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TrailerButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230429 13:50:01.086" level="INFO">Clicking element 'xpath=//*[contains(text(),'TRAILER')]'.</msg>
+<status status="PASS" starttime="20230429 13:50:01.085" endtime="20230429 13:50:03.340"/>
+</kw>
+<status status="PASS" starttime="20230429 13:49:54.275" endtime="20230429 13:50:03.341"/>
+</kw>
+<kw name="Assertion for the Trailer exist">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TrailerMedia}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230429 13:50:03.343" endtime="20230429 13:50:03.409"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TrailerMedia}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230429 13:50:03.431" level="INFO">Element 'xpath=//video[@name='media']' is displayed.</msg>
+<status status="PASS" starttime="20230429 13:50:03.409" endtime="20230429 13:50:03.431"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20230429 13:50:03.582" level="INFO" html="true">&lt;a href="screenshot_3.jpg"&gt;&lt;img src="screenshot_3.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230429 13:50:03.432" endtime="20230429 13:50:03.583"/>
+</kw>
+<status status="PASS" starttime="20230429 13:50:03.342" endtime="20230429 13:50:03.585"/>
+</kw>
+<status status="PASS" starttime="20230429 13:49:09.808" endtime="20230429 13:50:03.586"/>
+</test>
+<status status="PASS" starttime="20230429 13:49:09.690" endtime="20230429 13:50:03.590"/>
+</suite>
+<status status="PASS" starttime="20230429 13:48:23.122" endtime="20230429 13:50:03.596"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Teststories2 &amp; Teststories3 &amp; Teststories1">Teststories2 &amp; Teststories3 &amp; Teststories1</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Teststories2">Teststories2 &amp; Teststories3 &amp; Teststories1.Teststories2</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Teststories3">Teststories2 &amp; Teststories3 &amp; Teststories1.Teststories3</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Teststories1">Teststories2 &amp; Teststories3 &amp; Teststories1.Teststories1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
