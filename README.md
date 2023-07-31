@@ -9,7 +9,7 @@ Automation Testing for Cineplex website
 
 #Requirement 
 
-- Python 2.7 or higher 
+- Python 3.9 or higher 
 - Robot Framework
 - WxPython
 - Visual Studio Code or Any IDE 
