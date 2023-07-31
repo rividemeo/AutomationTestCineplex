@@ -32,7 +32,7 @@ Assertion for the Trailer exist
     Element Should Be Visible  ${TrailerMedia}
 
 [Teardown]    
-Close Browser
+    Close Browser
 
 *** Test Cases ***
 #Focus in Test case 

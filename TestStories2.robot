@@ -31,7 +31,7 @@ Assertion for Playing Theater in Yogyakarta
     Element Should Be Visible        ${PlayingInYogyakartaText}
     
 [Teardown]    
-Close Browser
+    Close Browser
 
 *** Test Cases ***
 #Focus in Test case 
