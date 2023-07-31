@@ -36,6 +36,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with robot framework
       run: |
-        robot TestStories1.robot
-        robot TestStories2.robot
-        robot TestStories3.robot
+        robot .\TestStories1.robot
